@@ -1,10 +1,18 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int main()
+int main(int argc, char *argv[])
 {
-	FILE *r =  fopen("lab1.txt", "r");
-	FILE *w = fopen("case.txt", "w+");
+  if(argc != 3){
+    puts("Wrong number of arguments!");
+    return 1;
+  }
+	FILE *r =  fopen(argv[1], "r");
+	if(r == NULL){
+	  puts("Input file doesn't exist!");
+	  return 2;
+	}
+	FILE *w = fopen(argv[2], "w+");
 	char c;
 
 	while((c = fgetc(r)) != EOF){
