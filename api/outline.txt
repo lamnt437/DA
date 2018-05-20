@@ -1,0 +1,13 @@
+Lesson 1: Arrays and pointers
+Lesson 2. File operations
+Lesson 3. Dynamic arrays and structures
+Lesson 4. Linked List
+Lesson 5. Stack
+Lesson 6. Queue
+Lesson 7. Search
+Lesson 8. Tree 
+Lesson 9. Tree Traversal
+Lesson 10. Sorting 
+Lesson 11. Quick sort 
+Lesson 12. Merge Sort 
+Lesson 13. String Pattern Searching 

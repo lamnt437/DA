@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+    FILE *r = fopen("test.txt", "r");
+    char s[10];
+    int temp;
+    for(int i = 0; i < 4; i++){
+        temp = fscanf(r, "%s", s);
+        printf("%s %d\n", s, temp);
+    }
+    fclose(r);
+}
