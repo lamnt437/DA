@@ -6,3 +6,4 @@ commit:
 	git commit -m 'update'
 push:
 	git push -u origin master
+update: add commit push
