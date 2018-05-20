@@ -1,10 +1,10 @@
 #include <stdio.h>
 #define MAX 10
 
-int main()
+int main(int argc, char *argv[])
 {
-	FILE *r = fopen("lab1.txt", "r");
-	FILE *w = fopen("line.txt", "w+");
+	FILE *r = fopen(argv[1], "r");
+	FILE *w = fopen(argv[2], "w+");
 
 	char s[MAX];
 
