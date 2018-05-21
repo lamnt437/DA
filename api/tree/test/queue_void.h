@@ -4,7 +4,7 @@
 
 #define QUEUE_SIZE 100
 
-typedef TreeType Element;
+typedef int Element;
 
 typedef struct q{
 	int counter;
