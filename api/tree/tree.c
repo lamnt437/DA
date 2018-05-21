@@ -1,4 +1,5 @@
 #include "tree.h"
+#include "queue_void.h"
 
 TreeType makeNodeTree(Content_t v){
   TreeType newNode = (TreeType)malloc(sizeof(NodeTree));

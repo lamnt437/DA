@@ -1,8 +1,8 @@
-main: main.o queue.o tree.o
-	gcc -o main main.o queue.o tree.o
-main.o: main.c tree.h
+main: main.o lib.o
+	gcc -o main main.o lib.o
+main.o: main.c lib.h
 	gcc -c main.c
-tree.o: tree.c tree.h queue.c queue.h
-	gcc -c tree.c queue.c
+lib.o: lib.c lib.h
+	gcc -c lib.c
 clean: 
 	rm *.o

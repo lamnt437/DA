@@ -1,4 +1,4 @@
-#include "tree.h"
+#include "lib.h"
 
 int main(){
   int arr[7] = {5, 4, 19, 1, 3, 7, 12};
