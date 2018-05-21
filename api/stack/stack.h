@@ -4,20 +4,21 @@
 #include <ctype.h>
 
 
-typedef char Content;
+typedef char Content_s;
 
 typedef struct e{
-	Content data;
+	Content_s data;
 	struct e *next;
-}Element;
+}Element_s;
 
-typedef Element *List;
+typedef Element_s *List;
+typedef List Stack;
 
 
-int isEmpty(List stack);
-void printContent(Content v);
-void printList(Element *root);
-Element *makeNode(Content v);
-void push(List *stack, Content v);
-Content peek(List stack);
-Content pop(List *stack);
+int isEmpty_s(List stack);
+void printContent(Content_s v);
+void printList(Element_s *root);
+Element_s *makeNode(Content_s v);
+void push(List *stack, Content_s v);
+Content_s peek(List stack);
+Content_s pop(List *stack);

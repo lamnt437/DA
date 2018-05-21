@@ -2,7 +2,7 @@
 //edit Element typedef in "queue.h"
 
 
-int isEmpty(Queue q){
+int isEmpty_q(Queue q){
 	return q.counter == 0;
 }
 
@@ -10,7 +10,7 @@ int isFull(Queue q){
 	return q.counter == QUEUE_SIZE;
 }
 
-void printElement(Element v){
+void printElement(Element_q v){
 	//edit according to element content
 	printf("%c ", v);//
 }
@@ -23,7 +23,7 @@ void printQueue(Queue q){
 	printf("\n");
 }
 
-int enqueue(Queue *q, Element v){
+int enqueue(Queue *q, Element_q v){
 	if(!isFull((*q))){
 		(*q).arr[(*q).rear] = v;
 		(*q).rear = ((*q).rear + 1) %	QUEUE_SIZE;
@@ -33,10 +33,10 @@ int enqueue(Queue *q, Element v){
 	return 0;
 }
 
-Element dequeue(Queue *q){
+Element_q dequeue(Queue *q){
 	//edit temp value
-	Element temp = EOF;//
-	if(!isEmpty((*q))){
+	Element_q temp = EOF;//
+	if(!isEmpty_q((*q))){
 		temp = (*q).arr[(*q).front];
 		(*q).front = ((*q).front + 1) % QUEUE_SIZE;
 		(*q).counter--;

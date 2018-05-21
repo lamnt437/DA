@@ -4,18 +4,20 @@
 #include <ctype.h>
 #define QUEUE_SIZE 100
 
-typedef char Element;
+typedef char Element_q;
 
 typedef struct q{
 	int counter;
 	int front;
 	int rear;
-	Element arr[QUEUE_SIZE];
+	Element_q arr[QUEUE_SIZE];
 }Queue;
 
-int isEmpty(Queue q);
+//need initialize q value
+
+int isEmpty_q(Queue q);
 int isFull(Queue q);
-void printElement(Element v);
+void printElement(Element_q v);
 void printQueue(Queue q);
-int enqueue(Queue *q, Element v);
-Element dequeue(Queue *q);
+int enqueue(Queue *q, Element_q v);
+Element_q dequeue(Queue *q);
