@@ -1,1 +1,2 @@
 Gonna make a clean tree lib
+Gonna add delete and search functions
