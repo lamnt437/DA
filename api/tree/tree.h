@@ -55,3 +55,4 @@ TreeType getParent(TreeType root, TreeType ptr);
 void swapValueNodeTree(TreeType a, TreeType b);
 TreeType delete1(TreeType root);
 TreeType deleteNodeTree(TreeType root, int key);
+void traverse(TreeType root, TreeType ptr, int check_score);

@@ -16,7 +16,7 @@ int main(){
             6 - EXIT\n\
             ?");
     scanf("%d", &choice);
-    // getchar();
+    getchar();
 
     while(choice != 6){
         switch(choice){
@@ -53,7 +53,7 @@ int main(){
             6 - EXIT\n\
             ?");
         scanf("%d", &choice);
-        // getchar();
+        getchar();
     }
     printf("\nEXIT\n");
 

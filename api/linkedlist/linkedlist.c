@@ -51,6 +51,13 @@ void insertFirst(List *root, Content v){
 	*root = newNode;
 }
 
+List insertLast(List root, List ptr){
+    if(root == NULL)
+        return ptr;
+    root->next = insertLast(root->next, ptr);
+    return root;
+}
+
 Element *search(List root, char key[]){//edit parameter               
 	Element *ptr = root;
 	while(ptr != NULL){
@@ -86,7 +93,7 @@ int delete(List *root, char key[]){//edit parameter
 	}
 	return 0;
 }
-
+/*
 int change(List *root, char key[]){//edit parameter
 	Element *ptr = *root;
 
@@ -105,15 +112,23 @@ int change(List *root, char key[]){//edit parameter
 	}
 	return 0;
 }
+*/
+void printListSL(List root, int sl){
+    List ptr = root;
+    for(int i = 0; i < sl; i++){
+        printContent(ptr->data);
+        ptr = ptr->next;
+    }
+}
 
-int counter(List root){
-	int counter = 0;
-	Element *ptr = root;
-	while(ptr != NULL){
-		counter++;
-		ptr = ptr->next;
-	}
-	return counter;
+int listCounter(List root){
+    List ptr = root;
+    int counter = 0;
+    while(ptr != NULL){
+        counter++;
+        ptr = ptr->next;
+    }
+    return counter;
 }
 
 void bubbleSort(List root){//descending

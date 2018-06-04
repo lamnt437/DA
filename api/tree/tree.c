@@ -189,3 +189,14 @@ TreeType deleteNodeTree(TreeType root, int key){
   }
   return root;
 }
+
+void traverse(TreeType root, TreeType ptr, int check_score){
+    if(ptr != NULL){
+        traverse(root, ptr->left, check_score);
+        if(ptr->data.score < check_score){
+            printf("%-15s\t%5d\n", (ptr->data).id, (ptr->data).score);
+            root = deleteNodeTree(root, (ptr->data).id);
+        }
+        traverse(root, ptr->right, check_score);
+    }
+}
